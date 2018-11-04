@@ -1,0 +1,304 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Docstrings &#8212; Django Coins  documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Welcome to Django Coins’s documentation!" href="../../index.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="docstrings">
+<h1>Docstrings<a class="headerlink" href="#docstrings" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-api.views">
+<span id="api-views"></span><h2>API views<a class="headerlink" href="#module-api.views" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="api.views.AccountView">
+<em class="property">class </em><code class="descclassname">api.views.</code><code class="descname">AccountView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/api/views.html#AccountView"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.views.AccountView" title="Permalink to this definition">¶</a></dt>
+<dd><p>This viewset  provides <cite>list</cite>, <cite>create</cite> actions for Account model.</p>
+<dl class="attribute">
+<dt id="api.views.AccountView.serializer_class">
+<code class="descname">serializer_class</code><a class="headerlink" href="#api.views.AccountView.serializer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#api.serializers.AccountSerializer" title="api.serializers.AccountSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">api.serializers.AccountSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="api.views.PaymentView">
+<em class="property">class </em><code class="descclassname">api.views.</code><code class="descname">PaymentView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/api/views.html#PaymentView"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.views.PaymentView" title="Permalink to this definition">¶</a></dt>
+<dd><p>This viewset  provides <cite>list</cite>, <cite>create</cite> actions for Payment model.</p>
+<dl class="attribute">
+<dt id="api.views.PaymentView.serializer_class">
+<code class="descname">serializer_class</code><a class="headerlink" href="#api.views.PaymentView.serializer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#api.serializers.PaymentSerializer" title="api.serializers.PaymentSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">api.serializers.PaymentSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="api.views.UserViewSet">
+<em class="property">class </em><code class="descclassname">api.views.</code><code class="descname">UserViewSet</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/api/views.html#UserViewSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.views.UserViewSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>This viewset automatically provides <cite>list</cite>, <cite>create</cite>, <cite>retrieve</cite>,
+<cite>update</cite> and <cite>destroy</cite> actions for UserModel.</p>
+<dl class="attribute">
+<dt id="api.views.UserViewSet.serializer_class">
+<code class="descname">serializer_class</code><a class="headerlink" href="#api.views.UserViewSet.serializer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#api.serializers.UserSerializer" title="api.serializers.UserSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">api.serializers.UserSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-api.serializers">
+<span id="api-serializers"></span><h2>API serializers<a class="headerlink" href="#module-api.serializers" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="api.serializers.AccountSerializer">
+<em class="property">class </em><code class="descclassname">api.serializers.</code><code class="descname">AccountSerializer</code><span class="sig-paren">(</span><em>instance=None</em>, <em>data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/api/serializers.html#AccountSerializer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.serializers.AccountSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="staticmethod">
+<dt id="api.serializers.AccountSerializer.validate_id">
+<em class="property">static </em><code class="descname">validate_id</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/api/serializers.html#AccountSerializer.validate_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.serializers.AccountSerializer.validate_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check existence of Account with pk=value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>value</strong> (<em>str</em>) – Primary key value</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Returns <cite>value</cite> if Account with pk=value does exist.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="api.serializers.PaymentSerializer">
+<em class="property">class </em><code class="descclassname">api.serializers.</code><code class="descname">PaymentSerializer</code><span class="sig-paren">(</span><em>instance=None</em>, <em>data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/api/serializers.html#PaymentSerializer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.serializers.PaymentSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="api.serializers.PaymentSerializer.create">
+<code class="descname">create</code><span class="sig-paren">(</span><em>validated_data</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/api/serializers.html#PaymentSerializer.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.serializers.PaymentSerializer.create" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>validated_data</strong> (<em>dict</em>) – Validated serializer data.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Returns outgoing payment for created transaction.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#billing.models.Payment" title="billing.models.Payment">billing.models.Payment</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="api.serializers.PaymentSerializer.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><em>attrs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/api/serializers.html#PaymentSerializer.validate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.serializers.PaymentSerializer.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Valis</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>attrs</strong> – Serializer fields data</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Return validated fields data</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="api.serializers.UserSerializer">
+<em class="property">class </em><code class="descclassname">api.serializers.</code><code class="descname">UserSerializer</code><span class="sig-paren">(</span><em>instance=None</em>, <em>data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/api/serializers.html#UserSerializer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.serializers.UserSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serializer for User models.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-billing.models">
+<span id="models"></span><h2>Models<a class="headerlink" href="#module-billing.models" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="billing.models.Account">
+<em class="property">class </em><code class="descclassname">billing.models.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>created_at</em>, <em>updated_at</em>, <em>id</em>, <em>user</em>, <em>balance</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/billing/models.html#Account"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#billing.models.Account" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="exception">
+<dt id="billing.models.Account.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#billing.models.Account.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="billing.models.Account.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#billing.models.Account.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="billing.models.Account.change_balance">
+<code class="descname">change_balance</code><span class="sig-paren">(</span><em>amount</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/billing/models.html#Account.change_balance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#billing.models.Account.change_balance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Locks Account row and change the balance</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>amount</strong> (<em>decimal.Decimal</em>) – Amount of balance change</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="billing.models.Account.clean">
+<code class="descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/billing/models.html#Account.clean"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#billing.models.Account.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate balance value before save.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="billing.models.Account.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/billing/models.html#Account.save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#billing.models.Account.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override default save() and add model validation before save.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="billing.models.Payment">
+<em class="property">class </em><code class="descclassname">billing.models.</code><code class="descname">Payment</code><span class="sig-paren">(</span><em>id</em>, <em>created_at</em>, <em>updated_at</em>, <em>amount</em>, <em>from_account</em>, <em>to_account</em>, <em>direction</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/billing/models.html#Payment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#billing.models.Payment" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="exception">
+<dt id="billing.models.Payment.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#billing.models.Payment.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="billing.models.Payment.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#billing.models.Payment.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-billing.mixins">
+<span id="models-mixins"></span><h2>Models’ Mixins<a class="headerlink" href="#module-billing.mixins" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="billing.mixins.CreateUpdateMixin">
+<em class="property">class </em><code class="descclassname">billing.mixins.</code><code class="descname">CreateUpdateMixin</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/billing/mixins.html#CreateUpdateMixin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#billing.mixins.CreateUpdateMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add time of creation and last update time to model</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Django Coins</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Docstrings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-api.views">API views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-api.serializers">API serializers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-billing.models">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-billing.mixins">Models’ Mixins</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../../index.html" title="previous chapter">Welcome to Django Coins’s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Anton Tuchak.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/_pages/template/docstrings.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
