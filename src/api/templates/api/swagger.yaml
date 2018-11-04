@@ -1,0 +1,254 @@
+---
+swagger: '2.0'
+
+################################################################################
+#                              API Information                                 #
+################################################################################
+info:
+  title: Django Coins API
+  version: v1.0
+  description: |
+    Available methods are GET, POST, PATCH.
+
+
+  ################################################################################
+# Host, Base Path, Schemes and Content Types
+################################################################################
+host: {{ request.META.HTTP_HOST }}
+basePath: /v1
+schemes:
+- http
+- https
+produces:
+- application/json
+consumes:
+- application/json
+
+################################################################################
+# Tags
+################################################################################
+tags:
+- name: Users
+- name: Accounts
+- name: Payments
+
+
+################################################################################
+# Parameters
+################################################################################
+parameters:
+  user-id:
+    name: user-id
+    in: path
+    description: The user ID
+    type: number
+    required: true
+
+
+################################################################################
+#                                           Paths                              #
+################################################################################
+paths:
+  /users:
+    get:
+      tags:
+      - Users
+      summary: Get all users.
+
+      responses:
+        200:
+          description: |
+            List of users
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/User'
+    post:
+      tags:
+      - Users
+      summary: Create new user.
+
+      parameters:
+      - name: body
+        description: |
+          Create new user
+        in: body
+        schema:
+          $ref: '#/definitions/UserPost'
+      responses:
+        201:
+          description: |
+            User successfully created
+        400:
+          description: Invalid input data
+
+  /users/{user-id}:
+    parameters:
+    - name: user-id
+      description: User ID
+      in: path
+      type: integer
+      required: true
+    get:
+      tags:
+      - Users
+      summary: Get user info.
+
+      responses:
+        200:
+          description: User data
+          schema:
+            $ref: '#/definitions/User'
+
+    patch:
+      tags:
+      - Users
+      summary: Partial update user data.
+      parameters:
+      - name: body
+        description: |
+          User data for update
+        in: body
+        schema:
+          $ref: '#/definitions/UserPost'
+      responses:
+        200:
+          description: User profile
+          schema:
+            $ref: '#/definitions/User'
+
+  /accounts:
+    get:
+      tags:
+      - Accounts
+      summary: Get all accounts.
+      responses:
+        200:
+          description: |
+            List of accounts
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Account'
+
+    post:
+      tags:
+      - Accounts
+      summary: Create an account.
+
+      parameters:
+      - name: body
+        description: |
+          Create new user
+        in: body
+        schema:
+          $ref: '#/definitions/Account'
+
+      responses:
+        201:
+          description: |
+            Create an account and return it.
+
+        400:
+          description: Invalid input data
+          schema:
+            $ref: '#/definitions/Error'
+
+
+  /payments:
+    get:
+      tags:
+      - Payments
+      summary: Get all payments.
+      responses:
+        200:
+          description: |
+            List of payments
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Payment'
+
+    post:
+      tags:
+      - Payments
+      summary: Create a payment.
+
+      parameters:
+      - name: body
+        description: |
+          Create new user
+        in: body
+        schema:
+          $ref: '#/definitions/Payment'
+
+      responses:
+        201:
+          description: |
+            Create an account and return it.
+
+        400:
+          description: Invalid input data
+          schema:
+            $ref: '#/definitions/Error'
+
+
+################################################################################
+#                                 Definitions                                  #
+################################################################################
+definitions:
+  User:
+    type: object
+    properties:
+      id:
+        type: integer
+      username:
+        type: string
+
+  UserPost:
+    type: object
+    properties:
+      username:
+        type: string
+
+
+  Account:
+    type: object
+    properties:
+      id:
+        type: string
+      owner:
+        type: integer
+      balance:
+        type: number
+        format: float
+
+  Payment:
+    type: object
+    properties:
+      id:
+        type: iteger
+      amount:
+        type: number
+        format: float
+      account:
+        type: string
+      from_account:
+        type: string
+
+  PaymentPost:
+    type: object
+    properties:
+      amount:
+        type: number
+        format: float
+      account:
+        type: string
+      from_account:
+        type: string
+
+  Error:
+    type: object
+    properties:
+      detail:
+        type: object
